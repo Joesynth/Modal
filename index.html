@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title></title>
+	<link rel="icon" href="#.png">
+	<link rel="stylesheet" href="#.css"/>
+	<script src="#/#.js"></script>
+
+	<style>
+/*estilizar nossa janela modal*/
+.modal {
+	width: 50%;
+	position: fixed;
+	top: 3em;
+	right: 3em;
+	bottom: 0;
+	//left: 0;
+	background: lightgreen;
+	z-index: 99999;
+	opacity:0;
+	-webkit-transition: opacity 400ms ease-in;
+	-moz-transition: opacity 400ms ease-in;
+	transition: opacity 400ms ease-in;
+	pointer-events: none;
+}
+
+/*Funcionalidades e aparência*/
+.modal:target {
+	opacity: 1;
+	pointer-events: auto;
+}
+
+/*mais apresentável ...*/
+.modal > div {
+	width: 400px;
+	position: relative;
+	margin: 10% auto;
+	padding: 15px 20px;
+	background: #fff;
+}
+
+/*estilizando botão de fechar*/
+.fechar {
+	width: 6em;
+	position: absolute;
+	left: 6em;
+	top: -20px;
+	text-align: center;
+	line-height: 30px;
+	margin-top: 5px;
+	background: purple;
+	border-radius: 50%;
+	color: green;
+}
+	
+	</style>
+
+</head>
+<body>
+
+
+<a href="#abrirModal">Promoção</a> <!-- ABRE O MODAL -->
+<div id="abrirModal" class="modal">
+	<a href="#fechar" title="Fechar" class="fechar">x</a>
+	<h2>Janela Modal</h2>
+	<p>Esta é uma simples janela de modal. Faz-se qualquer coisa aqui: página de Login, pop-ups, ou formulários</p>
+</div>
+
+
+	
+</body>
+</html>
